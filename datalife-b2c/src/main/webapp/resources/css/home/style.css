@@ -1,0 +1,1976 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+body, p, a, h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 780px) {
+    .mobile-sub.wsmenu-list.demo {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .wsmenu > .wsmenu-list > li > a {
+        width: 100%;
+    }
+
+    .book-an-appointment {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+    }
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#nav.affix.demo {
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+
+#sidebar.affix-top {
+    position: static;
+}
+
+.nav-width {
+    background: #F2F7F9 none repeat scroll 0 0;
+    width: 100%;
+    border-bottom: 2px solid #ededee;
+    box-shadow: 0 2px 2px #d5d5d5 inset;
+    -webkit-box-shadow: 0 2px 2px #d5d5d5 inset;
+}
+
+.wsmenuexpandermain {
+    position: relative;
+}
+
+.overlapblackbg {
+    display: none;
+}
+
+#signin > li {
+    border: 0pt none;
+    text-transform: uppercase;
+}
+
+#signin > li a {
+    display: inline-block;
+}
+
+.wsmenu {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    position: relative;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.wsmenu-list {
+    text-align: left;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    display: table;
+    padding: 0px;
+}
+
+.wsmenu-list.demo {
+    text-align: left;
+    margin: 0 auto 0 auto;
+    width: 83%;
+    display: table;
+    float: right;
+    padding: 0px;
+}
+
+.wsmenu-list > li {
+    text-align: center;
+    display: table-cell;
+    border-right: 1px solid #dfdfdf;
+}
+
+.wsmenu-list > li:last-child {
+    border-right: 0pt none;
+}
+
+.wsmenu-list li:last-child a {
+    border-right: 0px solid;
+}
+
+.wsmenu-list li a .arrow:after {
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid #b3b3b3;
+    content: "";
+    float: right;
+    height: 0;
+    margin: 0 0 0 9px;
+    position: absolute;
+    text-align: right;
+    top: 22px;
+    width: 0;
+}
+
+.wsmenu-list > li > a {
+    display: block;
+    color: #424242;
+    line-height: 48px;
+    text-decoration: none;
+    border-bottom: 0px solid #F2F7F9;
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1110px) {
+    .wsmenu-list > li > a > {
+        display: none !important;
+    }
+
+    .hometext {
+        display: block !important;
+    }
+
+    .wsmenu {
+        font-size: 13px !important;
+    }
+
+    .wsmenu-list li a {
+        white-space: nowrap !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1200px) {
+    .wsmenu-list li a .arrow:after {
+        display: none !important;
+    }
+}
+
+/*------------------------------------ Mobile CSS ---------------------------------------------*/
+@media only screen and (max-width: 780px) {
+    .wsmenu-list > li:hover > a {
+        background-color: #fff !important;
+        text-decoration: none;
+        border-bottom: 2px solid #fff;
+    }
+
+    .wsmenu-submenu > li:hover > a {
+        background-color: #7b7b7b;
+        color: #666666;
+        text-decoration: none;
+    }
+
+    .wsmenu > .wsmenu-list > li > a.active {
+        color: #666666;
+        background-color: #fff;
+        text-decoration: none;
+    }
+
+    .wsmenu > .wsmenu-list > li > a:hover {
+        color: #666666;
+        background-color: #fff;
+        text-decoration: none;
+    }
+
+    .wsmenu-list li:hover .wsmenu-submenu {
+        display: none;
+    }
+
+    .wsmenu-list li:hover .wsmenu-submenu .wsmenu-submenu-sub {
+        display: none;
+    }
+
+    .wsmenu-list .wsmenu-submenu .wsmenu-submenu-sub li:hover .wsmenu-submenu-sub-sub {
+        display: none;
+        list-style: none;
+        padding: 4px;
+        border: solid 1px #eeeeee;
+        background-color: #fff;
+    }
+
+    .wsmenu-list li:first-child a {
+        -webkit-border-radius: 0px 0px 0px 0px;
+        -moz-border-radius: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .wsmenu-list li:last-child a {
+        -webkit-border-radius: 0px 4px 0px 0px;
+        -moz-border-radius: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+        border-right: 0px solid;
+    }
+
+    .wsmenuexpandermain {
+        display: block !important;
+        z-index: 101;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .wsmenu-click {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .wsmenu-click i {
+        display: block;
+        height: 23px;
+        width: 25px;
+        margin-top: 11px;
+        margin-right: 8px;
+        background-size: 25px;
+        font-size: 21px;
+        color: rgba(0, 0, 0, 0.25);
+        float: right;
+    }
+
+    .wsmenu-rotate {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .wsmenu {
+        position: relative;
+    }
+
+    .wsmenu .wsmenu-list {
+        height: 100%;
+        overflow-y: auto;
+        display: block !important;
+    }
+
+    .wsmenu .wsmenu-list > li {
+        width: 240px;
+        display: block;
+        float: none;
+        border-right: none;
+        background-color: transparent;
+        position: relative;
+        white-space: inherit;
+    }
+
+    .wsmenu > .wsmenu-list > li > a {
+        padding: 9px 32px 9px 17px;
+        font-size: 14px;
+        text-align: left;
+        border-right: solid 0px;
+        color: #000;
+        line-height: 25px;
+        border-bottom: 1px solid;
+        font-weight: 700;
+        border-bottom-color: rgba(0, 0, 0, 0.13);
+    }
+
+    .wsmenu > .wsmenu-list > li > a > .fa {
+        font-size: 16px;
+        color: #bfbfbf;
+    }
+
+    .wsmenu .wsmenu-list li a .arrow:after {
+        display: none !important;
+    }
+
+    .wsmenu .wsmenu-list li ul li a .fa.fa-caret-right {
+        font-size: 12px !important;
+        color: #8E8E8E;
+    }
+
+    .mobile-sub .wsmenu-submenu li a:hover {
+        background-color: #e7e7e7 !important;
+        color: #666666;
+        text-decoration: underline;
+    }
+
+    .mobile-sub .wsmenu-submenu li:hover > a {
+        background-color: #e7e7e7 !important;
+        color: #666666;
+    }
+
+    .mobile-sub .wsmenu-submenu li .wsmenu-submenu-sub li a {
+        line-height: 20px;
+        height: 36px;
+        background-color: #e7e7e7 !important;
+        border-bottom: none;
+        padding-left: 28px;
+    }
+
+    .mobile-sub .wsmenu-submenu li .wsmenu-submenu-sub li .wsmenu-submenu-sub-sub li a {
+        line-height: 20px;
+        height: 36px;
+        background-color: #e7e7e7 !important;
+        border-bottom: none !important;
+        padding-left: 38px;
+        color: #8e8e8e;
+    }
+
+    .wsmenu-list li:hover .megamenu {
+        display: none;
+        position: relative !important;
+        top: 0;
+    }
+
+    .wsmenu {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 0;
+        background-color: #fff;
+        border-radius: 0;
+        z-index: 100;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        border: none !important;
+    }
+
+    .wsmenu.menuopen {
+        width: 240px;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .wsmenu.menuclose {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .wsmenucontent {
+        z-index: 1;
+    }
+
+    .animated-arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .animated-arrow {
+        cursor: pointer;
+        margin: 39px 30px 0 15px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-raidus: 3px;
+        padding: 6px 28px 22px 2px;
+    }
+
+    .animated-arrow span, .animated-arrow span:before, .animated-arrow span:after {
+        cursor: pointer;
+        height: 2px;
+        width: 23px;
+        background: #000;
+        position: absolute;
+        display: block;
+        content: '';
+    }
+
+    .animated-arrow span:before {
+        top: -7px;
+    }
+
+    .animated-arrow span:after {
+        bottom: -7px;
+    }
+
+    .animated-arrow span, .animated-arrow span:before, .animated-arrow span:after {
+        transition: all 500ms ease-in-out;
+    }
+
+    .animated-arrow.menuopen span {
+        background-color: transparent;
+    }
+
+    .animated-arrow.menuopen span:before, .animated-arrow.active span:after {
+        top: 7px;
+    }
+
+    .animated-arrow.menuopen span:before {
+        transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        bottom: 0px;
+    }
+
+    .animated-arrow.menuopen span:after {
+        transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+}
+
+/*new css for home page*/
+.call_us_demo {
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.call_us {
+    color: #929697;
+    font-size: 12px;
+}
+
+.support_mail {
+    font-size: 13px;
+}
+
+.logo.postion {
+    padding: 15px 0;
+}
+
+#signin a {
+    font-family: open sans;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logo.postion > a {
+    display: block;
+}
+
+.wsmenu-list > li > a.active {
+    border-bottom: 2px solid #98bc00 !important;
+    margin-bottom: -1px;
+}
+
+.section_1 {
+    background: rgba(0, 0, 0, 0) url("/resources/images/banner.png") no-repeat scroll center center;
+}
+
+.new_lab_info {
+    color: #d5ff6f;
+    font-size: 44px;
+    font-weight: 800;
+    margin: 0;
+    text-align: right;
+}
+
+.address_info {
+    color: #fff;
+    font-family: open sans;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.home-banner {
+    overflow: hidden;
+    padding: 86px 0;
+}
+
+.about_data {
+    color: #444444;
+    font-weight: 600;
+    font-family: open sans;
+    text-align: center;
+    margin: 0;
+}
+
+.for_doctor_page {
+    max-width: 82px;
+    position: relative;
+    margin-top: 3px;
+}
+
+.for_doctor_page::after {
+    background: #D7D7D7;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 70%;
+    top: 6px;
+    width: 30px;
+}
+
+.titleline {
+    max-width: 82px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pre_service_line {
+    max-width: 82px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pre_service_line::after {
+    background: #B5B5B5;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 70%;
+    top: 2px;
+    width: 64px;
+}
+
+.titleline::after {
+    background: #72C02C;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 70%;
+    top: 14px;
+    width: 147px;
+}
+
+.titleline.for_sr_page::after {
+    width: 74px;
+}
+
+.data_life_intro {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.about-datalife {
+    padding: 29px 0;
+}
+
+.quick_access {
+    color: #565656;
+    font-size: 13px;
+}
+
+.emr_rec {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-bottom: 17px;
+    padding-top: 15px;
+}
+
+.add_emr_details {
+    margin-top: 13px;
+    overflow: hidden;
+}
+
+.align_state {
+    list-style-type: none;
+    padding: 40px 0;
+
+    text-align: center;
+}
+
+.align_state > a {
+    border: 2px solid #cccccc;
+    color: #858585;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 0;
+    margin-right: 7px;
+    padding: 10px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.align_state > a:hover {
+    text-decoration: none;
+}
+
+.maintain_health {
+    color: #7d7f7a;
+    font-family: open sans;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 26px;
+}
+
+.existing_customer {
+    color: #c7c7c9;
+    font-family: open sans;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.login-here {
+    color: #fff;
+    font-family: open sans;
+    font-size: 16px;
+}
+
+.reg_page {
+    float: right;
+    margin-top: -8px;
+}
+
+.reg_datalife {
+    background: #519315 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    padding: 9px 17px;
+    font-size: 17px;
+}
+
+.reg_datalife:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #387a0a;
+}
+
+li {
+    list-style-type: none;
+}
+
+.reg_clinic_info {
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    margin: 0 auto;
+    text-align: center;
+    width: 82%;
+}
+
+.reg_clinic {
+    background: rgba(0, 0, 0, 0) url("/resources/images/datlife_helath.png") no-repeat scroll left center;
+    color: #80857e;
+    display: inline-block;
+    font-family: open sans;
+    font-size: 16px;
+    font-weight: 700;
+    height: 70px;
+    line-height: 66px; /*margin-left: 16px;*/
+    padding-left: 75px;
+}
+
+.doc_regi {
+    background: rgba(0, 0, 0, 0) url("/resources/images/online_doc.png") no-repeat scroll left center;
+}
+
+.cd-testimonials-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 768px;
+    background-color: #fff;
+    margin: 2em auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 20px 40px 70px;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
+
+.cd-testimonials-wrapper::after {
+    content: '\201C';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    padding-top: 8px;
+    margin-left: -25px;
+    background: rgba(110, 193, 110, 0.9);
+    font-family: "Georgia", serif;
+    color: #ffffff;
+    font-size: 70px;
+    font-size: 4.375rem;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-testimonials-wrapper {
+        padding: 64px 50px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-testimonials-wrapper::after {
+        display: block;
+    }
+}
+
+.cd-testimonials {
+    color: #000;
+    text-align: center;
+}
+
+.cd-testimonials::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.cd-testimonials > li {
+    position: absolute;
+    opacity: 0;
+}
+
+.cd-testimonials > li:first-child {
+    position: relative;
+    opacity: 1;
+}
+
+.cd-testimonials p {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    padding: 0 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-testimonials p {
+        font-size: 22px;
+        font-size: 1.375rem;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-testimonials p {
+        font-size: 26px;
+        font-size: 1.625rem;
+        line-height: 1.6;
+    }
+}
+
+.cd-author img, .cd-author .cd-author-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cd-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.cd-author .cd-author-info {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.cd-author .cd-author-info li:first-child {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.cd-author .cd-author-info li:last-child {
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #6b6b70;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-author img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cd-author .cd-author-info {
+        line-height: 1.4;
+    }
+
+    .cd-author .cd-author-info li:first-child {
+        font-size: 16px;
+    }
+
+    .cd-author .cd-author-info li:last-child {
+        font-size: 14px;
+    }
+}
+
+.flex-direction-nav {
+    list-style-type: none;
+}
+
+.flex-direction-nav li {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0;
+}
+
+.flex-direction-nav li:first-child {
+    left: 0;
+}
+
+.flex-direction-nav li:last-child {
+    right: 0;
+}
+
+.flex-direction-nav li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 13px;
+    background-color: #000;
+}
+
+.flex-direction-nav li a::before {
+    -webkit-transform: translateY(-35px) rotate(45deg);
+    -moz-transform: translateY(-35px) rotate(45deg);
+    -ms-transform: translateY(-35px) rotate(45deg);
+    -o-transform: translateY(-35px) rotate(45deg);
+    transform: translateY(-35px) rotate(45deg);
+}
+
+.flex-direction-nav li a::after {
+    -webkit-transform: translateY(-27px) rotate(-45deg);
+    -moz-transform: translateY(-27px) rotate(-45deg);
+    -ms-transform: translateY(-27px) rotate(-45deg);
+    -o-transform: translateY(-27px) rotate(-45deg);
+    transform: translateY(-27px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::before {
+    -webkit-transform: translateY(-35px) rotate(-45deg);
+    -moz-transform: translateY(-35px) rotate(-45deg);
+    -ms-transform: translateY(-35px) rotate(-45deg);
+    -o-transform: translateY(-35px) rotate(-45deg);
+    transform: translateY(-35px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::after {
+    -webkit-transform: translateY(-27px) rotate(45deg);
+    -moz-transform: translateY(-27px) rotate(45deg);
+    -ms-transform: translateY(-27px) rotate(45deg);
+    -o-transform: translateY(-27px) rotate(45deg);
+    transform: translateY(-27px) rotate(45deg);
+}
+
+@media only screen and (min-width: 768px) {
+    .flex-direction-nav li {
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .flex-direction-nav li a::before, .flex-direction-nav li a::after {
+        -webkit-transition: background-color 0.2s;
+        -moz-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+    }
+
+    .flex-direction-nav li a:hover::before, .flex-direction-nav li a:hover::after {
+        background-color: #222;
+    }
+}
+
+.cd-see-all {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #252527;
+    text-align: center;
+    text-transform: uppercase;
+    color: #6b6b70;
+    font-weight: 700;
+    font-size: 12px;
+    font-size: 0.75rem;
+    -webkit-transition: color, 0.2s;
+    -moz-transition: color, 0.2s;
+    transition: color, 0.2s;
+}
+
+.no-touch .cd-see-all:hover {
+    color: #79b6e4;
+}
+
+.cd-testimonials-all {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-testimonials-all .cd-testimonials-all-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.cd-testimonials-all .cd-testimonials-all-wrapper > ul {
+    width: 90%;
+    max-width: 1170px;
+    margin: 4em auto;
+}
+
+.cd-testimonials-all .cd-testimonials-all-wrapper > ul::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.cd-testimonials-all .cd-testimonials-item {
+    margin-bottom: 2em;
+    opacity: 0;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0) scale(0.4);
+    -moz-transform: translate3d(0, 0, 0) scale(0.4);
+    -ms-transform: translate3d(0, 0, 0) scale(0.4);
+    -o-transform: translate3d(0, 0, 0) scale(0.4);
+    transform: translate3d(0, 0, 0) scale(0.4);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .3s, opacity .3s;
+    -moz-transition: -moz-transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s;
+}
+
+.cd-testimonials-all p {
+    position: relative;
+    background: #79b6e4;
+    color: #ffffff;
+    padding: 2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+}
+
+.cd-testimonials-all p::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 2em;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-top-color: #79b6e4;
+}
+
+.cd-testimonials-all .cd-author {
+    text-align: left;
+    margin-left: 1.5em;
+}
+
+.cd-testimonials-all .cd-author img {
+    box-shadow: 0 0 0 transparent;
+}
+
+.cd-testimonials-all.is-visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-testimonials-all.is-visible .cd-testimonials-all-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+.cd-testimonials-all.is-visible .cd-testimonials-item {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    -moz-transform: translate3d(0, 0, 0) scale(1);
+    -ms-transform: translate3d(0, 0, 0) scale(1);
+    -o-transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-testimonials-all .cd-testimonials-item {
+        width: 46%;
+        margin: 0 2% 3em;
+    }
+
+    .cd-testimonials-all .cd-author {
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-testimonials-all .cd-testimonials-item {
+        width: 30%;
+        margin: 0 1.6666% 3em;
+    }
+}
+
+.testimonials-cont {
+    background: #fff;
+}
+
+.mem_form {
+    background: #fff;
+    padding: 25px 0;
+    border-top: 1px solid #dadada;
+}
+
+.member_form {
+    color: #22211f;
+    padding-bottom: 40px;
+    font-family: open sans;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.add_border {
+    border: 1px solid #eaeaea;
+    margin-bottom: 10px;
+    background: #f5f5f5;
+}
+
+.std {
+    border-bottom: 2px solid #eaeaea;
+    color: #494949;
+    font-family: open sans;
+    font-weight: 600;
+    margin: 0;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.per_yr {
+    border-bottom: 2px solid #eaeaea;
+    color: #7e7e7e;
+    font-family: open sans;
+    font-size: 17px;
+    margin: 0;
+    padding-bottom: 18px;
+    text-align: center;
+}
+
+.free {
+    color: #5dbb5d;
+    font-family: open sans;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.adding_list {
+    padding: 0px 15px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.available_offer > li {
+    border-bottom: 1px solid #eee;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.available_offer {
+    margin-bottom: 0;
+}
+
+.available_offer > li:last-child {
+    border: none;
+}
+
+.available_offer a {
+    color: #abaaab;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.available_offer a:hover {
+    color: #5DBB5D;
+    text-decoration: none;
+}
+
+.sign_up_class {
+    background: #5a5859 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.sign_up_page {
+    padding: 34px 0;
+    text-align: center;
+}
+
+.premium {
+    color: #5dbb5d;
+    font-family: open sans;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.most_powerful {
+    color: #5dbb5d;
+    font-family: open sans;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 7px;
+}
+
+.free.amount_cls {
+    border-top: 2px solid #eaeaea;
+    color: #fff;
+}
+
+.sign_up_class:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #403e3f;
+}
+
+.premium_rate {
+    background: #5dbb5d;
+}
+
+.popular_pack {
+    color: #fff;
+}
+
+@media (max-width: 1055px) {
+    .reg_clinic_info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .address_info {
+        max-width: 100%;
+    }
+
+    .align_state {
+        padding-left: 0;
+    }
+
+    .mobile-sub.wsmenu-list.demo {
+        width: 73%;
+    }
+}
+
+@media (max-width: 767px) {
+    .emr_rec, .datlife_option, .datalife_help, .align_state, .add_doc_details {
+        text-align: center !important;
+    }
+
+    .patient_rec_lab {
+        margin-top: 35px;
+    }
+
+    .add_image {
+        background-image: none;
+    }
+}
+
+@media (max-width: 509px) {
+    .reg_clinic {
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 400px) {
+    .call_us {
+        text-align: center;
+    }
+
+    .login_demo, .login_status {
+        float: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .align_state > a {
+        padding: 9px;
+    }
+
+    .align_state {
+        padding-left: 0;
+    }
+}
+
+.login_status {
+    float: left;
+}
+
+.login_demo {
+    float: right;
+    padding-top: 20px;
+}
+
+.login_status > h5 {
+    color: #fff;
+    font-family: open sans;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.login_status > h6 {
+    color: #c7c7c7;
+    font-family: open sans;
+    font-size: 14px;
+    margin: 6px 0 0;
+    text-decoration: underline;
+}
+
+.login-btn-class {
+    background: #5EBC5E;
+    border-radius: 50px;
+    color: #fff !important;
+    font-weight: 600 !important;
+    line-height: 33px !important;
+    padding: 0 15px;
+}
+
+.premium_payment {
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.for_premim_cust {
+    margin-top: -24px;
+}
+
+.logo_specification {
+    float: left;
+}
+
+.demo.affix-top {
+    float: right !important;
+}
+
+.mobile-sub.wsmenu-list.demo.home-page {
+    padding: 20px 0 0;
+    vertical-align: middle;
+}
+
+.login-btn-class:hover {
+    color: #5bb75b;
+    background: #98BC00;
+}
+
+#signin > li a:focus, .flex-next:focus, .flex-prev:focus, .animated-arrow:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.sign_up_class:focus, .reg_datalife:focus {
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 1202px) {
+    .wsmenu-list.demo {
+        width: 59% !important;
+    }
+}
+
+@media (max-width: 487px) {
+    .home-banner {
+        padding: 40px 0;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .overlapblackbg {
+        background-color: rgba(0, 0, 0, 0.45);
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .overlapblackbg.menuopen {
+        display: block;
+    }
+}
+#backTop {
+    width: 21px;
+    height: 17px;
+    padding: 10px;
+    border-radius: 4px;
+    text-indent: -9999px;
+    cursor: pointer;
+    z-index: 999999999;
+    display: none;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+#backTop.red {
+    background: url(/resources/images/uparr-48-w.png) no-repeat center center #72C02A;
+}
+
+.premium_cast > li a:focus {
+    outline: none;
+}
+
+/*new css for datalife 18/1/2015*/
+.heading_demo_page {
+    color: #3db2d3;
+    font-weight: 600;
+}
+
+.subscriber_links {
+    background: #EFF8FF;
+    padding: 42px 0 0;
+}
+
+.find_doc_fix {
+
+    margin-right: 11px;
+    min-height: 278px !important;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 38px;
+
+}
+
+.send_report {
+    color: #d2af4b !important;
+    font-size: 17px;
+    margin-bottom: 10px !important;
+}
+
+.vitals {
+    color: #D657A6 !important;
+}
+
+.family {
+    color: #4ACDC5 !important;
+}
+
+.find_doc_fix > img {
+    background: #eff8ff;
+    border-radius: 50%;
+    position: relative;
+    top: -43px;
+
+}
+
+.find_doc {
+    color: #3fc5c8;
+    font-family: open sans;
+    font-weight: 700;
+    margin: 0 !important;
+    font-size: 16px;
+
+}
+
+.upload_document {
+    color: #d3c946;
+    font-family: open sans;
+    font-weight: 600;
+    margin: 0 !important;
+    font-size: 16px;
+
+}
+
+.maintain_rec {
+    color: #5cbbf1;
+    font-family: open sans;
+    font-weight: 600;
+    margin: 0 !important;
+    font-size: 16px;
+
+}
+
+.medical {
+    color: #8A188A !important
+}
+
+.wellness {
+    color: #19B9C9 !important;
+}
+
+.internal {
+    color: #7DC24B !important;
+}
+
+.hippa {
+    color: #E2750E !important;
+    font-size: 16px;
+}
+
+.access_rec {
+    color: #BB1E49 !important;
+}
+
+.bill {
+    color: #454D50 !important;
+}
+
+.online_facility {
+    color: #232323;
+    font-family: open sans;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.icondoctor {
+    background: #ff735c none repeat scroll 0 0;
+    border-radius: 50%;
+    float: left;
+    margin-right: 13px;
+    vertical-align: middle !important;
+}
+
+.bg_url {
+    margin-bottom: 19px;
+    overflow: hidden;
+}
+
+/*css for doctor and clinic*/
+
+.subscriber_button {
+    background-image: url(/resources/images/sprite-doctor.png);
+    background-repeat: no-repeat;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
+}
+
+.button1 {
+    background-color: #FF735C;
+    background-position: 3px -754px;
+}
+
+.button2 {
+    background-color: #BD88FE;
+    background-position: 2px -641px;
+}
+
+.button3 {
+    background-color: #38C696;
+    background-position: 2px -526px;
+}
+
+.button4 {
+    background-color: #1E344C;
+    background-position: 1px -410px;
+}
+
+.button5 {
+    background-color: #9FD367;
+    background-position: 1px -296px;
+}
+
+.button6 {
+    background-color: #FF735C;
+    background-position: 2px -179px;
+}
+
+.button7 {
+    background-color: #B27CF4;
+    background-position: 3px -61px;
+}
+
+.button8 {
+    background-color: #50DEAE;
+    background-position: 2px -700px;
+}
+
+.button9 {
+    background-color: #FFB961;
+    background-position: 2px -585px;
+}
+
+.button10 {
+    background-color: #507878;
+    background-position: 2px -469px
+}
+
+.button11 {
+    background-color: #F37D7D;
+    background-position: 2px -351px;
+}
+
+.button12 {
+    background-color: #4CB0FC;
+    background-position: 2px -238px;
+}
+
+.button13 {
+    background-color: #F3B666;
+    background-position: 2px -118px;
+}
+
+.button14 {
+    background-color: #37C796;
+}
+
+.text_justify {
+    margin: 0;
+    text-align: justify;
+}
+
+.datalife_subscriber {
+    padding: 15px 0;
+}
+
+.find_doc_demo {
+    padding-bottom: 22px;
+}
+
+.exclusive_health {
+    float: right;
+}
+
+.dat_background {
+    margin-bottom: 36px;
+    margin-top: 36px;
+}
+
+.add_premiumcolor {
+    background: #fafbfd none repeat scroll 0 0;
+}
+
+.pre_services {
+    color: #e1740d;
+    font-family: open sans;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.consult_premium_services {
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.pre_pack_ser {
+    text-align: center;
+}
+
+.background_video {
+    padding-bottom: 25px;
+}
+
+/*accordian styles*/
+/*.content {
+    margin-top: 24px;
+}*/
+.remove_pad {
+    padding: 0 !important;
+}
+
+.accr_know_more {
+    color: #010101;
+    font-weight: 600;
+
+}
+
+.remove_pad > img {
+    height: 130px;
+    width: 130px;
+}
+
+.labs_diagnostics {
+    background: #f2f7fa;
+    color: #000;
+    font-family: open sans;
+    font-size: 14px;
+    font-weight: 700 !important;
+    transition: background 0.2s linear 0s !important;
+    height: 51px;
+    line-height: 51px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.doctor_appointments {
+    padding: 26px 0;
+}
+
+.add_lines {
+    border-left: 1px solid #E6E6E6;
+    margin-bottom: 18px;
+    margin-top: 28px;
+}
+
+@media (max-width: 1199px) {
+    .find_doc_fix {
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .find_doc_fix {
+        min-height: 0 !important;
+    }
+
+    .add_lines {
+        border: none;
+    }
+
+    .add_align, .remove_pad {
+        text-align: center;
+    }
+
+    .subscriber_button {
+        margin-bottom: 21px;
+    }
+
+    .background_video {
+        text-align: center;
+    }
+
+    .add_border {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-btm, .copyright {
+        text-align: center;
+        padding-top: 13px;
+        line-height: 0 !important;
+    }
+
+    .copyright > p {
+        margin: 0;
+        line-height: 21px;
+        padding: 0;
+    }
+
+    .add_class {
+        padding: 0 !important;
+    }
+
+    .labs_diagnostics {
+        font-size: 11px !important;
+    }
+
+    .for_doctor_page {
+        display: none;
+    }
+
+    .online_facility {
+        text-align: center;
+    }
+
+    .subscriber_button {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 697px) {
+    .about_data {
+        font-size: 20px;
+    }
+
+    .new_lab_info {
+        font-size: 37px;
+        text-align: center;
+    }
+
+    .address_info {
+        text-align: center;
+    }
+
+    .exclusive_health {
+        float: none;
+    }
+}
+
+/*footer css*/
+.sr_footer {
+    background: #2f3232;
+}
+
+.add_foot {
+    line-height: 0;
+}
+
+.align {
+    text-align: right;
+}
+
+.add_class {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.footer-btm {
+    line-height: 44px;
+}
+
+.footer-btm > a {
+    color: #bcbec0;
+    font-size: 13px;
+}
+
+.copyright > p {
+    color: #bcbec0;
+    padding: 9px 0;
+    font-size: 13px;
+}
+
+.sr_db_color {
+    background: #f3f3f3;
+    border: 1px solid #dadada;
+    margin-bottom: 10px;
+}
+
+/*accrodian css*/
+
+.accordion * {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    outline: 0
+}
+
+.accordion {
+    background-color: #fff;
+    /*border: 1px solid #e9e9e9*/
+}
+
+.accordion-item:last-child .accordion-header {
+    border-bottom: none
+}
+
+.accordion-header:hover,
+.accordion-item.active .accordion-header {
+    background-color: #f7f8f9
+}
+
+.accordion-header i {
+    width: 26px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 16px
+}
+
+.accordion-header .accordion-item-arrow:before {
+    content: '^';
+    font-family: FontAwesome;
+    float: right;
+    /*font-size: 18px;*/
+    transition: all .2s linear;
+    transform: rotate(180deg);
+}
+
+.accordion-item.active .accordion-header .accordion-item-arrow:before {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    color: #fff !important;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    border-bottom: solid 1px #e9e9e9;
+    font-size: 14px;
+    color: #434955
+}
+
+.accordion-item:last-child .accordion-content {
+    /*border-bottom: none;*/
+    border-top: solid 1px #e9e9e9
+}
+
+.accordion-header:hover,
+.accordion-item.active .accordion-header {
+    background-color: #69a46e !important;
+    color: #fff !important;
+    font-family: open sans !important;
+
+    text-transform: uppercase;
+}
+
+.accordion {
+    background-color: #fff;
+    /*  border: 1px solid #e9e9e9;*/
+    margin-bottom: 21px;
+}
+
+.accordion-content {
+    border: 1px solid #e9e9e9;
+    color: #434955;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 15px;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.up_arrow {
+
+    color: #be335c;
+    float: right;
+    font-size: 26px !important;
+
+}
+
+.up_arrow:hover {
+    color: #fff !important;
+}
+
+.up_arrow:active {
+    color: #fff !important;
+}
+
+.accordion-item-arrow.up_arrow {
+    border-left: 1px solid #CED8DA;
+    padding-left: 17px;
+}
+
+/*end here*/
+.for_sub_patient {
+    margin-bottom: 8px;
+}
+
+.add_align > p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/*navigation csss*/
+.homepage_class > li {
+    border-right: 1px solid #45525f !important;
+    display: inline-block;
+    line-height: 0;
+
+}
+
+.nav-width.add_property {
+    background: #2a3744 none repeat scroll 0 0;
+    border-bottom: medium none;
+    box-shadow: none;
+
+}
+
+.homepage_class li a {
+    color: #fff;
+    padding: 0 35px !important;
+
+}
+
+.homepage_class li a:hover {
+    color: #98BC00;
+}
+
+@media (max-width: 1177px) {
+    .homepage_class li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1043px) {
+    .homepage_class li a {
+        padding: 0 30px !important;
+    }
+}
+
+@media (max-width: 1027px) {
+    .homepage_class li a {
+        padding: 0 16px !important;
+    }
+}
+
+.online_facility > span {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.emr_rec.add_doc_details {
+    color: #555555 !important;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/*end heer*/
+

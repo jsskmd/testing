@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.login_page {
+	margin: 0 auto;
+	text-align: center;
+	max-width: 500px;
+	padding: 10px 0 0;
+}
+.get_login_details {
+	background: #222632 none repeat scroll 0 0;
+	border: 8px solid #aab1b7;
+	border-radius: 11px;
+}
+.dict_facility {
+	border-bottom: 1px solid #373f42;
+	color: #fffefc;
+	font-family: open sans;
+	font-size: 19px;
+	margin: 0;
+	padding: 15px 0;
+}
+.link_page > li {
+	display: inline-block;
+	padding: 0 15px;
+	border-right: 1px solid #373f42
+}
+.link_page > li:last-child {
+	border-right: none;
+}
+.link_list {
+	background-image: url("../images/spite.png");
+	background-repeat: no-repeat;
+	height: 58px;
+	width: 58px;
+}
+.link_list.link1 {
+	background-position: -5px -2px;
+}
+.link_list.link1:hover {
+	background-position: -5px -55px;
+}
+.link_span {
+	display: block;
+	text-align: center;
+	margin-top: 9px;
+}
+.link_list.link2 {
+	background-position: -134px -2px;
+}
+.link_list.link4 {
+	background-position: -71px -2px;
+}
+.link_list.link4:hover {
+	background-position: -71px -108px;
+}
+.link_list.link3:hover {
+	background-position: -71px -108px;
+}
+.link_list.link3:hover {
+	background-position: -198px -108px;
+}
+.link_list.link2:hover {
+	background-position: -134px -108px;
+}
+.link_pages {
+	text-decoration: none;
+}
+.note-heading {
+	font-size: 21px;
+	font-weight: bold;
+	margin: 0;
+	padding-top: 10px;
+}
+.note-details {
+	text-align: left;
+	padding: 10px 0;
+}
+.link_list.link3 {
+	background-position: -198px -1px;
+}
+.link_page {
+	margin: 0;
+	padding: 0;
+}
+.link_span {
+	color: #a8dc31;
+	font-family: open sans;
+	font-size: 13px;
+	font-weight: 600;
+}
+.pause {
+	color: #34B1E1 !important;
+}
+.stop {
+	color: #fff !important;
+}
+.note1 {
+	font-family:"Roboto", sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 10px 0 0;
+}
+
+.ac_results {
+	padding: 0px;
+	/*border: 1px solid #ff7c08;ppp*/
+	border: 1px solid #000000;
+	background-color: white;
+	overflow: hidden;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/*color: #972800;ppp*/
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/ /*width: 100%;*/
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('../images/indicator.gif') right center no-repeat;
+}
+
+.ac_odd { /*background-color: #fef2d8;ppp*/
+	background-color: white;
+}
+
+.ac_over { /*background-color: #febb80;ppp*/
+	background-color: #98AFC7;
+	color: white;
+}
+
+
+.input_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	/*border:1px solid #FF7C08;ppp*/
+	border: 1px solid #000000;
+	padding: 2px;
+	width: 150px;
+	/*color:#802900;ppp*/
+	color: #00000;
+	background: white url(../images/search.png) no-repeat 3px 2px;
+	padding-left: 17px;
+}

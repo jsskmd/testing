@@ -1,0 +1,16 @@
+.tools a {
+    border: 1px solid #000;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    font-weight: 700
+}
+
+.overflowing {
+    cursor: zoom-out
+}

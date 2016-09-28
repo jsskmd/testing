@@ -1,0 +1,25 @@
+{
+
+    "result":{
+        "files":[
+            {
+                "fileId":null,
+                "fileName":null,
+                "contentType":null,
+                "fileType":null,
+                "chiefComplaint":null,
+                "diagnosis":null,
+                "speciality":null,
+                "url":null,
+                "dataSize":null,
+                "vthumbnailUrl":null,
+                "vurl":null,
+                "ticket":null,
+                "vdownloadUrl":null,
+                "error":"Your Quota Exceeded",
+                "encounterDate":null
+            }
+        ]
+    }
+
+}

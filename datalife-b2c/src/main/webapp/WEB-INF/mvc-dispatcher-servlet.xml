@@ -1,0 +1,256 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:task="http://www.springframework.org/schema/task"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa  http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <!-- ***************************** basic service ********************************************* -->
+    <context:annotation-config/>
+
+    <!-- Activates @Scheduled and @Async annotations for scheduling -->
+    <task:annotation-driven executor="executorWithPoolSizeRange" scheduler="taskScheduler"/>
+
+    <!-- The 'executor' element:
+  When a task is submitted, the executor will first try to use a free thread if the number of active threads is currently less than
+  the core size. If the core size has been reached, then the task will be added
+  to the queue as long as its capacity has not yet been reached. Only then,
+  if the queue's capacity has been reached, will the executor create a new
+  thread beyond the core size. If the max size has also been reached, then
+  the executor will reject the task   See: 25.4.2 The 'executor' element -->
+
+    <!-- Defines a ThreadPoolTaskExecutor instance with configurable pool size, queue-capacity, keep-alive,
+       and rejection-policy values. The id becomes the default thread name prefix -->
+    <task:executor id="executorWithPoolSizeRange"  pool-size="5-25"   queue-capacity="100"/>
+
+    <!-- Defines a ThreadPoolTaskScheduler instance with configurable pool size.
+    The id becomes the default thread name prefix. -->
+    <task:scheduler id="taskScheduler" pool-size="1"/>
+
+    <context:component-scan base-package="com.datalife.*"/>
+    <jpa:repositories base-package="com.datalife.repositories"/>
+    <mvc:resources mapping="/resources/**" location="resources/" cache-period="31556926"/>
+
+    <mvc:default-servlet-handler/>
+
+    <aop:aspectj-autoproxy/>
+    <context:component-scan base-package="com.datalife.aspectj">
+        <context:include-filter type="aspectj" expression="com.datalife.aspectj.AuditAdvice"/>
+    </context:component-scan>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>messages</value>
+                <value>alfrescoUrl</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="validationMessageSource" ref="messageSource"/>
+    </bean>
+
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="prefix" value="/WEB-INF/velocity/"/>
+        <property name="suffix" value=".vm"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <util:list id="beanList">
+                <ref bean="mappingJackson2HttpMessageConverter"/>
+                <ref bean="stringHttpMessageConverter"/>
+                <!-- <ref bean="marshallingHttpMessageConverter"/>-->
+            </util:list>
+        </property>
+    </bean>
+
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+    <bean id="mappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes" value="application/json"/>
+    </bean>
+
+    <!-- <bean id="marshallingHttpMessageConverter"
+           class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+         <property name="marshaller" ref="castorMarshaller"/>
+         <property name="unmarshaller" ref="castorMarshaller"/>
+     </bean>
+     <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/>-->
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:database.properties</value>
+                <value>classpath:messages.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ***************************** basic service ********************************************* -->
+    <!-- ***************************** jpa service ********************************************* -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="showSql" value="true"/>
+        <property name="generateDdl" value="true"/>
+        <property name="database" value="MYSQL"/>
+    </bean>
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
+        <!-- spring based scanning for entity classes-->
+        <property name="packagesToScan" value="com.datalife.entities"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <!-- ***************************** jpa service ********************************************* -->
+
+    <!-- ***************************** email service start********************************************* -->
+
+    <bean id="smtpAuthenticator"
+          class="com.datalife.entities.SmtpAuthenticator">
+        <constructor-arg value="supportdatalife"/>
+        <constructor-arg value="Datascribe"/>
+    </bean>
+
+    <!-- now setup an authenticated session -->
+    <bean id="mailSession" class="javax.mail.Session"
+          factory-method="getInstance">
+        <constructor-arg>
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.socketFactory.port">465</prop>
+                <prop key="mail.smtp.socketFactory.class">
+                    javax.net.ssl.SSLSocketFactory
+                </prop>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.ssl.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+                <prop key="mail.smtp.socketFactory.fallback">false</prop>
+            </props>
+        </constructor-arg>
+        <constructor-arg ref="smtpAuthenticator"/>
+    </bean>
+
+    <!-- and configure the MailSender with the authenticated session -->
+    <bean id="mailSender"  class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.webfaction.com"/>
+        <property name="port" value="465"/>
+        <property name="session" ref="mailSession"/>
+    </bean>
+
+    <!-- this is a template message that we can pre-load with default state -->
+    <bean id="preConfiguredMessage"  class="org.springframework.mail.SimpleMailMessage">
+        <property name="from" value="support@datalife.in"/>
+        <property name="subject" value="datascribe"/>
+    </bean>
+
+    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/"/>
+    </bean>
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <props>
+                <prop key="resource.loader">class</prop>
+                <prop key="class.resource.loader.class">
+                    org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                </prop>
+            </props>
+        </property>
+    </bean>
+    <!-- ***************************** email service end********************************************* -->
+
+    <!-- ***************************** security service start********************************************* -->
+
+    <security:global-method-security secured-annotations="enabled"/>
+    <security:http pattern="/resources/**" security="none"/>
+
+    <security:http  pattern="/services/**" entry-point-ref="restAuthenticationEntryPoint" use-expressions="true" auto-config="false" create-session="stateless">
+        <security:custom-filter ref="authenticationTokenProcessingFilter" position="FORM_LOGIN_FILTER" />
+        <security:intercept-url pattern="/services/**" access="isAuthenticated()" />
+    </security:http>
+
+    <bean class="com.datalife.services.TokenAuthenticationFilter" id="authenticationTokenProcessingFilter">
+        <constructor-arg type="java.lang.String" value="/services/**"/>
+    </bean>
+
+    <bean id="restAuthenticationEntryPoint" class="com.datalife.services.RestAuthenticationEntryPoint" />
+    <bean id="csrfSecurityRequestMatcher" class="com.datalife.services.CsrfSecurityRequestMatcher" />
+
+    <security:http auto-config="true" use-expressions="true" create-session="always">
+<!--<security:intercept-url pattern="/invalidSession" access="hasAnyRole('ROLE_PATIENT','ROLE_DOCTOR','ROLE_CLINIC')"/>-->
+        <security:intercept-url pattern="/**" access="permitAll"/>
+        <security:access-denied-handler error-page="/403" />
+        <security:form-login login-page="/login" default-target-url="/" authentication-failure-url="/?error"
+                username-parameter="username"
+                password-parameter="password"/>
+        <security:logout logout-url="/?logout" logout-success-url="/login" delete-cookies="JSESSIONID" invalidate-session="false"/>
+        <security:session-management invalid-session-url="/" session-fixation-protection="newSession">
+             <security:concurrency-control error-if-maximum-exceeded="true" expired-url="/invalidSession"  max-sessions="1" />
+        </security:session-management>
+        <security:remember-me key="dlKey" remember-me-parameter="remember-me" token-validity-seconds="31536000" user-service-ref="myUserDetailsService"/>
+
+        <!-- enable csrf protection -->
+        <security:csrf request-matcher-ref="csrfSecurityRequestMatcher"/>
+
+    </security:http>
+
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider user-service-ref="myUserDetailsService">
+            <security:password-encoder ref="passwordEncoder"/>
+        </security:authentication-provider>
+        <security:authentication-provider user-service-ref="jdbcUserService"/>
+    </security:authentication-manager>
+
+    <bean id="jdbcUserService" class="org.springframework.security.provisioning.JdbcUserDetailsManager">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="authenticationManager" ref="authenticationManager"/>
+    </bean>
+
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <!-- ***************************** security service end********************************************* -->
+    <!-- ***************************** upload service start********************************************* -->
+    <bean id="filterMultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="100000000"/>
+    </bean>
+
+    <mvc:interceptors>
+        <bean id="webContentInterceptor"   class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+            <property name="cacheSeconds" value="0"/>
+            <property name="useExpiresHeader" value="true"/>
+            <property name="useCacheControlHeader" value="true"/>
+            <property name="useCacheControlNoStore" value="true"/>
+        </bean>
+    </mvc:interceptors>
+    <!-- ***************************** upload service end********************************************* -->
+</beans>

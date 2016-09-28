@@ -1,0 +1,78 @@
+body{
+    background: #fff;
+}
+.mob_nav_list li {
+    padding: 0 !important;
+}
+
+.admin_submenu {
+    width: 35% !important;
+}
+
+.admin_submenu li a {
+    padding: 1px !important;
+}
+.admin_password{width:17% !important;}
+.head_li{
+    text-decoration: underline;
+   color: blue !important;
+}
+#home_show{
+    margin: 2% 10%;
+}
+.home_show_div{
+    padding: 5px;
+    font-size: 14px;
+    color: brown;
+    width: 50%;
+    float: left;
+}
+.align_right{
+    text-align: right;
+    padding-right: 20px;
+}
+.sub_div{
+    margin-left: 15%;
+    border: 1px dashed lightgray;
+    overflow: auto;
+}
+.total{
+    font-weight: bold;
+    color: black;
+}
+.submit_btn{
+    float: right;
+    margin-right: 8px;
+}
+.sub_head{
+    height: 35px;
+    padding: 12px;
+    margin: 0% 5%;
+}
+.sub_head_name{
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: darkseagreen;
+}
+
+.sub_head_add{
+    float: right;
+    font-size: 13px;
+    color: blue;
+    text-decoration: underline;
+}
+.reset_btn{
+    background-color: #fff !important;
+    color: green !important;
+    border: 1px solid lightgray !important;
+
+}
+.tablediv{
+    margin: 0% 5%;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+.searchdiv{
+    margin: 0% 4%;
+}

@@ -1,0 +1,9 @@
+# do not check in anything except the following: 
+# anything under src, .gitignore 
+
+target/
+.idea/
+emr.iml
+pom.xml
+./src/main/resources/alfrescoUrl.properties
+./src/main/resources/database.properties

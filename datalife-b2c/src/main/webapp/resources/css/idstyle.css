@@ -1,0 +1,61 @@
+
+TABLE   { COLOR: #000000; FONT: 11px verdana, arial, sans-serif; font-weight: normal; }
+
+.smtxt b {
+    color: #000;
+}
+.smtxt.dfss {
+    color: #c74d26;
+}
+.smtxt.dfss {
+    float: left;
+    /* margin: auto 0 0;*/
+    width: 92px;
+}
+.smtxt{color: #000;
+    float: left;
+    font-weight: bold;
+    margin-left: 13px;
+    margin-top: 11px;
+    width: 100px;}
+.back-image{padding:19px 10px;margin-right:9px;float:left;width:69px;}
+span {
+
+}
+.naming {
+    color: #fff;
+    margin-left: 80px;
+    float:right;
+    max-width:133px;
+}
+.grp {
+    color: #fff;
+
+    margin-left: 36px;
+}
+.num-in {
+    color: #fff;
+    margin-left: 2px;
+}
+.smtxt.demo {
+    line-height: 19px;    margin-left: -2px;
+    margin-right: 0;
+    float:none;
+}
+.imag-for-ic {
+    padding: 0px 6px;
+    margin-right:13px;
+}
+.allign-demo{text-align:left;}
+.id-det-per {
+    float: left;
+    line-height: 27px;
+}
+.id-det-per.list {
+    padding-bottom: 11px;
+}
+.image-overflow{overflow:hidden;margin-bottom:0;}
+.user-id-name {
+    font-weight: bold;
+}
+/*.user-id-name{float:left !important;}*/
